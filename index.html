@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+// Задание 1.
+//1
+value = +prompt('Введите число:')
+if (value < 0) {
+    alert('Число меньше нуля.')
+}
+if (value == 0) {
+    alert('Число равно нулю.')
+}
+else {
+    alert('Число больше нуля.')
+}
+
+//2
+value = +prompt('Введите ваш возраст: ')
+    if (value <= 0) {
+        alert('Возраст некорректный!')
+    }
+    if (value >= 121) {
+        alert('Возраст некорректный!')
+    }
+    else{
+        alert('Отлично, вам '+ value + ' лет!')
+    }
+
+//3
+value = +prompt("Введите число:");
+    if(value>0){
+        alert('|' +value+ '|='+value);
+    }
+    else{
+        value1 = value*(-1);
+        alert('|' +value+ '|='+value1);
+    }
+
+4
+hour = +prmopt('Введите часы:')
+minute = +prompt('Введите минуты:')
+sec = +prompt('Введите секунды')
+    if (hour <= 24){
+        if (minute <=60){
+            if (sec <= 60){
+                alert('Время: ' + hour +':'+minute+':'+sec + ' введено верно!')
+            }
+            else{
+                alert('Секунды введены неверно!')
+            }
+        }
+        else{
+            alert('Минуты введены неверно!')
+        }
+    }
+    else {
+        alert('Время введено неверно!')
+    }
+_______________________
+hour = +prompt("Введите часы: ");
+minute = +prompt("Введите минуты: ");
+sec = +prompt("Введите  секунды: ");
+        if (hour <= 24)
+        {
+            if(minute<=60)
+            {
+                if(sec<=60)
+                {
+                    alert('Время: ' + hour + ':' + minute + ':' + sec +' --> введены верно!');
+                }
+                else   // если верно часы и минуты, а сек не верно
+                {
+                    alert('Время: ' + hour + ':' + minute + ':' + sec + '--> введены верно часы, минуты, а секунды - нет!');
+                }
+            }
+            else // если верно часы, минуты нет
+            {
+                if(sec<=60)
+                {
+                    alert('Время: ' + hour + ':' + minute + ':' + sec + '--> Введены верно часы, секунды - минуты не верны!');
+                }
+                else //если часы верно, минуты и сек - нет
+                {
+                    alert('Время: ' + hour + ':' + minute + ':' + sec + '--> Часы верны, а секунды и минуты не верны!'); 
+                }
+            }
+        }
+        else
+        {
+            if(minute<=60)
+            {
+                if(sec<=60)
+                {
+                    alert('Время: ' + hour + ':' + minute + ':' + sec + ' --> Часы не верно, минуты верно, сек верно!');
+                }
+                else   // если часы и мин верны, а сек нет
+                {
+                    alert('Время: ' + hour + ':' + minute + ':' + sec + '--> часы не верно, минуты верно, сек не верно!');
+                }
+            }
+            else // если верно часы, минуты нет
+            {
+                if(sec<=60)
+                {
+                    alert('Время: ' + hour + ':' + minute + ':' + sec + '--> Часы не верно, минуты не верно, сек верно!');
+                }
+                else //если часы верно, минуты и сек - нет
+                {
+                    alert('Время: ' + hour + ':' + minute + ':' + sec + '--> Часы не верно, минуты не верно!');
+                }
+            }
+        }
+
+//5
+x = +prompt('Введите координату X:');
+y = +prompt('Введите координату Y:');
+if ((x > 0) && (y > 0)){
+    alert("I четверть");
+}
+if ((x < 0) && (y > 0)){
+    alert("II четверть");
+}
+if ((x < 0) && (y < 0)){
+    alert("III четверть");
+}
+if ((x > 0) && (y < 0)){
+    alert("IV четверть");
+}
+else{
+    alert("Точка лежит на оси");
+}
+
+
+
+
+// Задание 2.
+//1
+mounth =  +prompt('Введите номер месяца:');
+switch (mounth){
+    case 1:
+        alert(mounth + ' - январь!');
+        break;
+    case 2:
+        alert(mounth + ' - февраль!');
+        break;
+    case 3:
+        alert(mounth + ' - март!');
+        break;
+    case 4:
+        alert(mounth + ' - апрель!');
+        break;
+    case 5:
+        alert(mounth + ' - май!');
+        break;
+    case 6:
+        alert(mounth + ' - июнь!');
+        break;
+    case 7:
+        alert(mounth + ' - июль!');
+        break;
+    case 8:
+        alert(mounth + ' - август!');
+        break;
+    case 9:
+        alert(mounth + ' - сентрябрь!');
+        break;
+    case 10:
+        alert(mounth + ' - октябрь!');
+        break;
+    case 11:
+        alert(mounth + ' - ноябрь!');
+        break;
+    case 12:
+        alert(mounth + ' - декабрь!');
+        break;
+    default:
+        alert('Введите корректное значение!!!!!')
+}
+
+//2
+value1 = +prompt('Введите первое число:');
+value2 = +prompt('Введите второе число:');
+znak = prompt('Что необходимо сделать? (+ - * /)');
+switch(znak){
+    case "+":
+        result = value1 + value2;
+        alert(value1 + ' + ' + value2 + ' = ' + result);
+        break;
+    case "-":
+        result = value1 - value2;
+        alert(value1 + ' - ' + value2 + ' = ' + result);
+        break;
+    case "*":
+        result = value1 * value2;
+        alert(value1 + ' * ' + value2 + ' = ' + result);
+        break;
+    case "/":
+        result = value1 / value2;
+        alert(value1 + ' / ' + value2 + ' = ' + result);
+        break;
+    default:
+        alert('Выбран неверный знак!')
+}
+
+// Задание 3.
+//1
+value1 = +prompt('Введите первое число:');
+value2 = +prompt('Введите второе число:');
+parity = value1 < value2 ? alert(value2 + ' больше!') : alert(value1 + ' меньше!');
+parity2 = value1 > value2 ? value1 : value2;
+
+//2
+value = +prompt('Введите число');
+parity = value % 5 == 0 ? 'кратно пяти' : 'не кратно пяти';
+alert(parity)
+
+//3
+value = prompt('С какой ты планеты?');
+parity = (value == 'Земля') || (value == 'земля') ? alert('Привет, землянин!!!') : alert('Привет, инопланетянин!!!');
+
+
+
+</script>
+
+</body>
+</html>
